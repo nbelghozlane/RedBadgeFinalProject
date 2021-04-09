@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventModels\EventCreate.cs" />
+    <Compile Include="EventModels\EventDetail.cs" />
+    <Compile Include="EventModels\EventEdit.cs" />
+    <Compile Include="EventModels\EventListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

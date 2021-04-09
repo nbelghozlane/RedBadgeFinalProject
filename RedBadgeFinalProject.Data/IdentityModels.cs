@@ -32,7 +32,12 @@ namespace RedBadgeFinalProject.Data
             return new ApplicationDbContext();
         }
 
-        //public DbSet<Event> Events { get; set; }
+        public DbSet<Event> Events { get; set; }
+        // public DbSet<Guest> Guests { get; set; }
+        // public DbSet<Finance> Finances { get; set; }
+        // public DbSet<CheckList> CheckLists { get; set; }
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
