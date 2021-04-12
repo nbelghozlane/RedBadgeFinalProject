@@ -99,5 +99,19 @@ namespace RedBadgeFinalProject.Services
             }
         }
 
+        public bool DeleteEvent(int eventId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Events
+                        .Single(e => e.EventId == eventId && e.OwnerId == _userId);
+
+                ctx.Events.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
     }
 }

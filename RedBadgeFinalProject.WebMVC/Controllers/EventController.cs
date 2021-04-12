@@ -101,6 +101,31 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
             return View(model);
         }
 
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var service = CreateEventService();
+
+            var model = service.GetEventById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteEvent(int id)
+        {
+            var service = CreateEventService();
+
+            service.DeleteEvent(id);
+
+            TempData["SaveResult"] = "Your event has been deleted!";
+
+            return RedirectToAction("Index");
+        }
+
+
         private EventService CreateEventService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
