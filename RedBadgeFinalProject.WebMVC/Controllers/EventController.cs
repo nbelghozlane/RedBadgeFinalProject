@@ -59,6 +59,48 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateEventService();
+            var detail = service.GetEventById(id);
+            var model =
+                new EventEdit
+                {
+                    EventId = detail.EventId,
+                    EventName = detail.EventName,
+                    EventType = detail.EventType,
+                    Location = detail.Location,
+                    EventDate = detail.EventDate
+                };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, EventEdit model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            if(model.EventId != id)
+            {
+                ModelState.AddModelError("", "Invalid ID Number");
+                return View(model);
+            }
+
+            var service = CreateEventService();
+
+            if (service.UpdateEvent(model))
+            {
+                TempData["SaveResult"] = "Your event was successfully updated!";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your event could not be updated.");
+            return View(model);
+        }
+
         private EventService CreateEventService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

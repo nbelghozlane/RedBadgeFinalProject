@@ -9,19 +9,21 @@ namespace RedBadgeFinalProject.Models.EventModels
 {
     public class EventEdit
     {
-        [Required]
+        public int EventId { get; set; }
+        
+        //[Required]
         [MaxLength(50, ErrorMessage = "Please enter 50 characters or less.")]
         public string EventName { get; set; }
 
-        [Required]
+        //[Required]
         [MaxLength(50, ErrorMessage = "Please enter 50 characters or less.")]
         public string EventType { get; set; }
 
-        [Required]
+        //[Required]
         [MaxLength(50, ErrorMessage = "Please enter 50 characters or less.")]
         public string Location { get; set; }
 
-        [Required]
+        //[Required]
         public DateTime EventDate { get; set; }
     }
 }

@@ -81,5 +81,23 @@ namespace RedBadgeFinalProject.Services
 
         }
 
+        public bool UpdateEvent (EventEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Events
+                        .Single(e => e.EventId == model.EventId && e.OwnerId == _userId);
+
+                entity.EventName = model.EventName;
+                entity.EventType = model.EventType;
+                entity.Location = model.Location;
+                entity.EventDate = model.EventDate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
     }
 }
