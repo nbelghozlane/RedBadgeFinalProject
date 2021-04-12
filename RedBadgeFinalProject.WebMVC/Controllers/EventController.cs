@@ -50,6 +50,15 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var service = CreateEventService();
+
+            var model = service.GetEventById(id);
+
+            return View(model);
+        }
+
         private EventService CreateEventService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

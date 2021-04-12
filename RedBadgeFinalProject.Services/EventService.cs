@@ -60,5 +60,26 @@ namespace RedBadgeFinalProject.Services
             }
         }
 
+        public EventDetail GetEventById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Events
+                        .Single(e => e.EventId == id && e.OwnerId == _userId);
+                return
+                    new EventDetail
+                    {
+                        EventId = entity.EventId,
+                        EventName = entity.EventName,
+                        EventType = entity.EventType,
+                        Location = entity.Location,
+                        EventDate = entity.EventDate
+                    };
+            }
+
+        }
+
     }
 }
