@@ -18,7 +18,7 @@ namespace RedBadgeFinalProject.Models.EventModels
         [Display(Name = "Event Type (birthday, wedding, etc.)")]
         public string EventType { get; set; }
 
-        [Display(Name = "Event Date")]
-        public DateTime EventDate { get; set; }
+        [Display(Name = "Event Date & Time")]
+        public DateTimeOffset EventDateTime { get; set; }
     }
 }

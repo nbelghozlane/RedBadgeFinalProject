@@ -26,7 +26,7 @@ namespace RedBadgeFinalProject.Services
                     EventName = model.EventName,
                     EventType = model.EventType,
                     Location = model.Location,
-                    EventDate = model.EventDate
+                    EventDateTime = model.EventDateTime
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -51,7 +51,7 @@ namespace RedBadgeFinalProject.Services
                                 EventId = e.EventId,
                                 EventName = e.EventName,
                                 EventType = e.EventType,
-                                EventDate = e.EventDate
+                                EventDateTime = e.EventDateTime
                             }
                         );
 
@@ -75,7 +75,7 @@ namespace RedBadgeFinalProject.Services
                         EventName = entity.EventName,
                         EventType = entity.EventType,
                         Location = entity.Location,
-                        EventDate = entity.EventDate
+                        EventDateTime = entity.EventDateTime
                     };
             }
 
@@ -93,7 +93,7 @@ namespace RedBadgeFinalProject.Services
                 entity.EventName = model.EventName;
                 entity.EventType = model.EventType;
                 entity.Location = model.Location;
-                entity.EventDate = model.EventDate;
+                entity.EventDateTime = model.EventDateTime;
 
                 return ctx.SaveChanges() == 1;
             }

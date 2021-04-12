@@ -35,7 +35,7 @@ namespace RedBadgeFinalProject.Data
         public string Location { get; set; }
 
         [Required]
-        public DateTime EventDate { get; set; }
+        public DateTimeOffset EventDateTime { get; set; }
 
         [Required]
         public Guid OwnerId { get; set; }

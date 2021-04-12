@@ -70,7 +70,7 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
                     EventName = detail.EventName,
                     EventType = detail.EventType,
                     Location = detail.Location,
-                    EventDate = detail.EventDate
+                    EventDateTime = detail.EventDateTime
                 };
 
             return View(model);
