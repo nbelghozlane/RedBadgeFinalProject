@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Event.cs" />
+    <Compile Include="Guest.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202104091954010_FirstMigrationAddedEvent.cs" />
     <Compile Include="Migrations\202104091954010_FirstMigrationAddedEvent.Designer.cs">
