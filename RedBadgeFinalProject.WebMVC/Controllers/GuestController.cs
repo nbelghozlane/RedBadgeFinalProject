@@ -53,6 +53,72 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
 
             return View(model);
         }
+        
+        public ActionResult EditGuest(int id)
+        {
+            var service = CreateGuestService();
+            var detail = service.GetGuestById(id);
+            var model =
+                new GuestEdit
+                {
+                    GuestId = detail.GuestId,
+                    FullName = detail.FullName,
+                    Address = detail.Address,
+                    PhoneNumber = detail.PhoneNumber,
+                    IsAttending = detail.IsAttending
+                };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditGuest(int id, GuestEdit model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            if (model.GuestId != id)
+            {
+                ModelState.AddModelError("", "Invalid ID Number");
+                return View(model);
+            }
+
+            var service = CreateGuestService();
+
+            if (service.UpdateGuest(model))
+            {
+                TempData["SaveResult"] = "Your guest was successfully updated!";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your guest could not be updated.");
+            return View(model);
+        }
+
+        [ActionName("DeleteGuest")]
+        public ActionResult Delete(int id)
+        {
+            var service = CreateGuestService();
+
+            var model = service.GetGuestById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("DeleteGuest")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteGuest(int id)
+        {
+            var service = CreateGuestService();
+
+            service.DeleteGuest(id);
+
+            TempData["SaveResult"] = "Your guest has been deleted!";
+
+            return RedirectToAction("Index");
+        }
 
         private GuestService CreateGuestService()
         {

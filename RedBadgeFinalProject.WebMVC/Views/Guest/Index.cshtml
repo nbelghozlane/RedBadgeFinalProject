@@ -53,9 +53,9 @@
                 @Html.DisplayFor(modelItem => item.IsAttending)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.GuestId }) |
+                @Html.ActionLink("Edit", "EditGuest", new { id=item.GuestId }) |
                 @Html.ActionLink("Details", "GuestDetails", new { id=item.GuestId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.GuestId })
+                @Html.ActionLink("Delete", "DeleteGuest", new { id=item.GuestId })
             </td>
         </tr>
     }

@@ -81,5 +81,36 @@ namespace RedBadgeFinalProject.Services
 
         }
 
+        public bool UpdateGuest(GuestEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Guests
+                        .Single(e => e.GuestId == model.GuestId && e.OwnerId == _userId);
+
+                entity.FullName = model.FullName;
+                entity.Address = model.Address;
+                entity.PhoneNumber = model.PhoneNumber;
+                entity.IsAttending = model.IsAttending;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteGuest(int guestId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Guests
+                        .Single(e => e.GuestId == guestId && e.OwnerId == _userId);
+
+                ctx.Guests.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

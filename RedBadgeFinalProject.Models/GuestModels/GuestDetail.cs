@@ -21,6 +21,8 @@ namespace RedBadgeFinalProject.Models.GuestModels
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Is Attending")]
-        public bool IsAttending { get; set; }
+        public string IsAttending { get; set; }
+        
+        //public bool? IsAttending { get; set; }
     }
 }

@@ -7,16 +7,6 @@ using System.Threading.Tasks;
 
 namespace RedBadgeFinalProject.Data
 {
-    /*public enum EventType
-    {
-        Birthday Party = 1,
-        Wedding,
-        Holiday Party,
-        Graduation Party,
-        add more,
-        Other
-
-    }*/
     public class Event
     {
         [Key]
@@ -28,7 +18,7 @@ namespace RedBadgeFinalProject.Data
 
         [Required]
         [MaxLength(50, ErrorMessage = "Please enter 50 characters or less.")]
-        public string EventType { get; set; } //change to enum?
+        public string EventType { get; set; } 
 
         [Required]
         [MaxLength(50, ErrorMessage = "Please enter 50 characters or less.")]

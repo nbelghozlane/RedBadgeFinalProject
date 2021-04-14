@@ -24,7 +24,10 @@ namespace RedBadgeFinalProject.Models.GuestModels
         public string PhoneNumber { get; set; }
 
         [Required]
-        [Display(Name = "Is Attending")]
-        public bool IsAttending { get; set; }
+        [Display(Name = "Is Attending (Yes/No/No Response)")]
+        [MaxLength(15, ErrorMessage = "Please enter 15 characters or less (Yes/No/No Reponse).")]
+        public string IsAttending { get; set; }
+        //public bool? IsAttending { get; set; }
+
     }
 }

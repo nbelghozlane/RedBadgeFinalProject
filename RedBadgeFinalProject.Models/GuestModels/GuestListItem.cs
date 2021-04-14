@@ -18,7 +18,10 @@ namespace RedBadgeFinalProject.Models.GuestModels
         public string Address { get; set; }
 
         [Display(Name = "Is Attending")]
-        public bool IsAttending { get; set; }
+        public string IsAttending { get; set; }
+
+        //[Display(Name = "Is Attending")]
+        // public bool? IsAttending { get; set; }
 
         //Add in public int AdditionalNumberOfGuests??
     }

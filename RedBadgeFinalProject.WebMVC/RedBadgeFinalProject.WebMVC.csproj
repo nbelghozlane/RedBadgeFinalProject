@@ -245,6 +245,8 @@
     <Content Include="Views\Guest\Index.cshtml" />
     <Content Include="Views\Guest\CreateGuest.cshtml" />
     <Content Include="Views\Guest\GuestDetails.cshtml" />
+    <Content Include="Views\Guest\EditGuest.cshtml" />
+    <Content Include="Views\Guest\DeleteGuest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
