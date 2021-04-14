@@ -33,7 +33,7 @@ namespace RedBadgeFinalProject.Data
         }
 
         public DbSet<Event> Events { get; set; }
-        // public DbSet<Guest> Guests { get; set; }
+        public DbSet<Guest> Guests { get; set; }
         // public DbSet<Finance> Finances { get; set; }
         // public DbSet<CheckList> CheckLists { get; set; }
 

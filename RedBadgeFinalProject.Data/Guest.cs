@@ -29,9 +29,9 @@ namespace RedBadgeFinalProject.Data
         [Required]
         public Guid OwnerId { get; set; }
 
-        [ForeignKey(nameof(Event))]
+       /* [ForeignKey(nameof(Event))]
         public int EventId { get; set; }
-        public virtual Event Event { get; set; }
+        public virtual Event Event { get; set; }*/
 
     }
 }
