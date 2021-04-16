@@ -33,12 +33,11 @@ namespace RedBadgeFinalProject.Data
         public Guid OwnerId { get; set; }
 
         //[Required]
-        //public bool? IsAttending { get; set; } // error Unable to cast object of type 'System.Boolean' to type 'System.Array'.
+        //public bool IsAttending { get; set; } // error Unable to cast object of type 'System.Boolean' to type 'System.Array'.
         //Create drop down list?
 
         /* [ForeignKey(nameof(Event))]
          public int EventId { get; set; }
          public virtual Event Event { get; set; }*/
-
     }
 }

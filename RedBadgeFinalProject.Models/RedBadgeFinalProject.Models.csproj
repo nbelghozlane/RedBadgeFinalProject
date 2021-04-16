@@ -58,6 +58,10 @@
     <Compile Include="EventModels\EventDetail.cs" />
     <Compile Include="EventModels\EventEdit.cs" />
     <Compile Include="EventModels\EventListItem.cs" />
+    <Compile Include="ExpenseModels\ExpenseCreate.cs" />
+    <Compile Include="ExpenseModels\ExpenseDetail.cs" />
+    <Compile Include="ExpenseModels\ExpenseEdit.cs" />
+    <Compile Include="ExpenseModels\ExpenseListItem.cs" />
     <Compile Include="GuestModels\GuestCreate.cs" />
     <Compile Include="GuestModels\GuestDetail.cs" />
     <Compile Include="GuestModels\GuestEdit.cs" />
