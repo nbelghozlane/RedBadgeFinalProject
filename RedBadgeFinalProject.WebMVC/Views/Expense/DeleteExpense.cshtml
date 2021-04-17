@@ -1,0 +1,66 @@
+﻿@model RedBadgeFinalProject.Models.ExpenseModels.ExpenseDetail
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ExpenseDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpenseId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpenseId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpenseType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpenseType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
