@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventService.cs" />
+    <Compile Include="ExpenseService.cs" />
     <Compile Include="GuestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
