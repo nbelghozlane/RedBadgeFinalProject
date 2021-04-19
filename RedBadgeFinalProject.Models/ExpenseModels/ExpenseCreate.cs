@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,5 +27,10 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         [Display(Name = "Payment Method")]
         [MaxLength(12, ErrorMessage = "Please enter 12 characters or less.")]
         public string PaymentMethod { get; set; }
+
+        [Display(Name = "Event ID")]
+        public int? EventId { get; set; }
+        
+        public string Event { get; set; }
     }
 }

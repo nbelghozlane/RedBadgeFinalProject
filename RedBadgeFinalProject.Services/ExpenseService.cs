@@ -27,7 +27,8 @@ namespace RedBadgeFinalProject.Services
                     Description = model.Description,
                     Budget = model.Budget,
                     ActualAmount = model.ActualAmount,
-                    PaymentMethod = model.PaymentMethod
+                    PaymentMethod = model.PaymentMethod,
+                    EventId = model.EventId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -53,7 +54,9 @@ namespace RedBadgeFinalProject.Services
                                 ExpenseType = e.ExpenseType,
                                 Description = e.Description,
                                 Budget = e.Budget,
-                                ActualAmount = e.ActualAmount
+                                ActualAmount = e.ActualAmount,
+                                EventId = e.EventId,
+                                Event = e.Event.EventId + " " + e.Event.EventName
                             }
                         );
 
@@ -78,7 +81,9 @@ namespace RedBadgeFinalProject.Services
                         Description = entity.Description,
                         Budget = entity.Budget,
                         ActualAmount = entity.ActualAmount,
-                        PaymentMethod = entity.PaymentMethod
+                        PaymentMethod = entity.PaymentMethod,
+                        EventId = entity.EventId,
+                        Event = entity.Event.EventId + " " + entity.Event.EventName //
                     };
             }
         }
@@ -97,6 +102,7 @@ namespace RedBadgeFinalProject.Services
                 entity.Budget = model.Budget;
                 entity.ActualAmount = model.ActualAmount;
                 entity.PaymentMethod = model.PaymentMethod;
+                entity.EventId = model.EventId;
 
                 return ctx.SaveChanges() == 1;
             }

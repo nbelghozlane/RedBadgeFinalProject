@@ -22,5 +22,10 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         [Display(Name = "Actual Amount")]
         public double ActualAmount { get; set; }
 
+        [Display(Name = "Event ID")]
+        public int? EventId { get; set; }
+
+        public string Event { get; set; } //
+
     }
 }

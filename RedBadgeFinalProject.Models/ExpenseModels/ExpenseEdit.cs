@@ -27,5 +27,10 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         [Display(Name = "Payment Method")]
         [MaxLength(12, ErrorMessage = "Please enter 12 characters or less.")]
         public string PaymentMethod { get; set; }
+
+        public string Event { get; set; }
+
+        [Display(Name = "Event ID")]
+        public int? EventId { get; set; }
     }
 }
