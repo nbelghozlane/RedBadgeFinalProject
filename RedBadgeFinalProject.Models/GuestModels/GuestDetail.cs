@@ -22,7 +22,12 @@ namespace RedBadgeFinalProject.Models.GuestModels
 
         [Display(Name = "Is Attending")]
         public string IsAttending { get; set; }
-        
+
+        [Display(Name = "Event ID")]
+        public int? EventId { get; set; }
+
+        public string Event { get; set; }
+
         //public bool? IsAttending { get; set; }
     }
 }

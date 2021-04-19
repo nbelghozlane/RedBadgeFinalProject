@@ -34,6 +34,9 @@
         <th>
             @Html.DisplayNameFor(model => model.IsAttending)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event)
+        </th>
         <th></th>
     </tr>
 
@@ -53,9 +56,12 @@
                 @Html.DisplayFor(modelItem => item.IsAttending)
             </td>
             <td>
-                @Html.ActionLink("Edit", "EditGuest", new { id=item.GuestId }) |
-                @Html.ActionLink("Details", "GuestDetails", new { id=item.GuestId }) |
-                @Html.ActionLink("Delete", "DeleteGuest", new { id=item.GuestId })
+                @Html.DisplayFor(modelItem => item.Event)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditGuest", new { id = item.GuestId }) |
+                @Html.ActionLink("Details", "GuestDetails", new { id = item.GuestId }) |
+                @Html.ActionLink("Delete", "DeleteGuest", new { id = item.GuestId })
             </td>
         </tr>
     }

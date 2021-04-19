@@ -26,7 +26,8 @@ namespace RedBadgeFinalProject.Services
                     FullName = model.FullName,
                     Address = model.Address,
                     PhoneNumber = model.PhoneNumber,
-                    IsAttending = model.IsAttending
+                    IsAttending = model.IsAttending,
+                    EventId = model.EventId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -51,7 +52,9 @@ namespace RedBadgeFinalProject.Services
                                 GuestId = e.GuestId,
                                 FullName = e.FullName,
                                 Address = e.Address,
-                                IsAttending = e.IsAttending
+                                IsAttending = e.IsAttending,
+                                EventId = e.EventId,
+                                Event = e.Event.EventId + " " + e.Event.EventName
                             }
                         );
 
@@ -75,7 +78,9 @@ namespace RedBadgeFinalProject.Services
                         FullName = entity.FullName,
                         Address = entity.Address,
                         PhoneNumber = entity.PhoneNumber,
-                        IsAttending = entity.IsAttending
+                        IsAttending = entity.IsAttending,
+                        EventId = entity.EventId,
+                        Event = entity.Event.EventId + " " + entity.Event.EventName
                     };
             }
 
@@ -94,7 +99,8 @@ namespace RedBadgeFinalProject.Services
                 entity.Address = model.Address;
                 entity.PhoneNumber = model.PhoneNumber;
                 entity.IsAttending = model.IsAttending;
-
+                entity.EventId = model.EventId;
+                                
                 return ctx.SaveChanges() == 1;
             }
         }
