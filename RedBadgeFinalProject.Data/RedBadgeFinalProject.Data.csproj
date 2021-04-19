@@ -62,6 +62,14 @@
     <Compile Include="Migrations\202104091954010_FirstMigrationAddedEvent.Designer.cs">
       <DependentUpon>202104091954010_FirstMigrationAddedEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104172151166_AddedFKToGuest.cs" />
+    <Compile Include="Migrations\202104172151166_AddedFKToGuest.Designer.cs">
+      <DependentUpon>202104172151166_AddedFKToGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104191821036_FkExpense.cs" />
+    <Compile Include="Migrations\202104191821036_FkExpense.Designer.cs">
+      <DependentUpon>202104191821036_FkExpense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104091954010_FirstMigrationAddedEvent.resx">
       <DependentUpon>202104091954010_FirstMigrationAddedEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104172151166_AddedFKToGuest.resx">
+      <DependentUpon>202104172151166_AddedFKToGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104191821036_FkExpense.resx">
+      <DependentUpon>202104191821036_FkExpense.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

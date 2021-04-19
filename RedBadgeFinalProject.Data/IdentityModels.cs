@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
@@ -18,6 +19,10 @@ namespace RedBadgeFinalProject.Data
             // Add custom user claims here
             return userIdentity;
         }
+
+        //public virtual ICollection<Guest> Guests { get; set; }
+        //public virtual ICollection<Expense> Expenses { get; set; }
+        
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -36,8 +41,6 @@ namespace RedBadgeFinalProject.Data
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Expense> Expenses { get; set; }
         // public DbSet<CheckList> CheckLists { get; set; }
-
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,5 +1,7 @@
 ﻿using RedBadgeFinalProject.Data;
 using RedBadgeFinalProject.Models.EventModels;
+using RedBadgeFinalProject.Models.ExpenseModels;
+using RedBadgeFinalProject.Models.GuestModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,10 +53,28 @@ namespace RedBadgeFinalProject.Services
                                 EventId = e.EventId,
                                 EventName = e.EventName,
                                 EventType = e.EventType,
-                                EventDateTime = e.EventDateTime
-                            }
-                        );
+                                EventDateTime = e.EventDateTime,
 
+                                Guests = e.Guests  //
+                                    .Select(
+                                    g => new GuestListItem
+                                    {
+                                        GuestId = g.GuestId,
+                                        FullName = g.FullName
+
+                                    }).ToList(),
+
+                                Expenses = e.Expenses  //
+                                    .Select(
+                                    exp => new ExpenseListItem
+                                    {
+                                        ExpenseId = exp.ExpenseId,
+                                        Description = exp.Description
+
+                                    }).ToList()
+
+                            });
+                           
                 return query.ToArray();
 
             }

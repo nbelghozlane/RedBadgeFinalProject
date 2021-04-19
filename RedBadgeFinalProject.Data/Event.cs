@@ -29,5 +29,12 @@ namespace RedBadgeFinalProject.Data
 
         [Required]
         public Guid OwnerId { get; set; }
+
+        public virtual ICollection<Guest> Guests { get; set; } = new List<Guest>();
+
+        public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
+
+        //public virtual List<Guest> Guests { get; set; } = new List<Guest>();
+
     }
 }

@@ -21,5 +21,6 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
 
         [Display(Name = "Actual Amount")]
         public double ActualAmount { get; set; }
+
     }
 }

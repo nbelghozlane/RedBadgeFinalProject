@@ -33,7 +33,7 @@ namespace RedBadgeFinalProject.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Expenses.Add(entity);
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() == 1; //error when creating expense
             }
         }
 
