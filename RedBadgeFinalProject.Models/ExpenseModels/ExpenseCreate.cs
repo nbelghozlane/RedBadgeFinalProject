@@ -29,6 +29,7 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         public string PaymentMethod { get; set; }
 
         [Display(Name = "Event ID")]
+        [Required]
         public int? EventId { get; set; }
         
         public string Event { get; set; }

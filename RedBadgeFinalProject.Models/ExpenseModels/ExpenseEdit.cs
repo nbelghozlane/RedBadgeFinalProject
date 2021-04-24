@@ -14,9 +14,11 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
 
         [Display(Name = "Expense Type (Ex: Food, Equipment Rental, etc.)")]
         [MaxLength(50, ErrorMessage = "Please enter 50 characters or less.")]
+        [Required]
         public string ExpenseType { get; set; }
 
         [MaxLength(100, ErrorMessage = "Please enter 100 characters or less.")]
+        [Required]
         public string Description { get; set; }
 
         public double Budget { get; set; }
@@ -31,6 +33,7 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         public string Event { get; set; }
 
         [Display(Name = "Event ID")]
+        [Required]
         public int? EventId { get; set; }
     }
 }

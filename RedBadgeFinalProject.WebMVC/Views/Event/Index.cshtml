@@ -4,21 +4,39 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Events</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@if(TempData.ContainsKey("SaveResult"))
+@if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
         <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
-    </button>
-    @TempData["SaveResult"]
+        </button>
+        @TempData["SaveResult"]
     </div>
 }
+
+<div class="event">
+    @foreach (var item in Model)
+    {
+        <div class="panel-primary">
+            <div class="panel-heading">
+                <!--@Html.ActionLink(item.EventName, "Details")-->
+                <!--@Html.DisplayNameFor(model => model.EventName)-->
+                @Html.DisplayFor(modelItem => item.EventName)
+            </div>
+            <div class="panel-body">
+                @Html.DisplayFor(modelItem => item.EventType)
+                @Html.DisplayFor(modelItem => item.EventDateTime)
+            </div>
+        </div>
+    }
+
+</div>
 
 <table class="table">
     <tr>
@@ -37,26 +55,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventDateTime)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDateTime)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EventId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+            </td>
+        </tr>
+    }
 
 </table>
