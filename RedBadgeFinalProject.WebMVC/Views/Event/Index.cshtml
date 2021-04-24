@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Events</h2>
+<div class="event-header"><h2>My Events</h2></div>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -20,18 +20,20 @@
     </div>
 }
 
-<div class="event">
+<div class="event-board">
     @foreach (var item in Model)
     {
-        <div class="panel-primary">
-            <div class="panel-heading">
-                <!--@Html.ActionLink(item.EventName, "Details")-->
-                <!--@Html.DisplayNameFor(model => model.EventName)-->
-                @Html.DisplayFor(modelItem => item.EventName)
-            </div>
-            <div class="panel-body">
-                @Html.DisplayFor(modelItem => item.EventType)
-                @Html.DisplayFor(modelItem => item.EventDateTime)
+        <div class="card-container col-md-4 col-sm-6">
+            <div class="panel">
+                <div class="panel-heading">
+                    @Html.ActionLink(item.EventName, "Details")
+                </div>
+                <div class="panel-body">
+                    @Html.DisplayFor(modelItem => item.EventType)
+                    <div>
+                        @Html.DisplayFor(modelItem => item.EventDateTime)
+                    </div>
+                </div>
             </div>
         </div>
     }
