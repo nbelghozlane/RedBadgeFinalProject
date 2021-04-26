@@ -39,6 +39,15 @@ textarea {
 }
 
 .panel-heading {
+    color: white;
+    font-weight: bold;
     background-color: lightpink; 
     font-size: 25px;
 }
+
+.footer navbar-fixed-bottom {
+    text-align: center;
+    color: white;
+}
+
+

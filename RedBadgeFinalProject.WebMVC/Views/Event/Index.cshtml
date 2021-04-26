@@ -23,15 +23,22 @@
 <div class="event-board">
     @foreach (var item in Model)
     {
+
         <div class="card-container col-md-4 col-sm-6">
             <div class="panel">
                 <div class="panel-heading">
-                    @Html.ActionLink(item.EventName, "Details")
+                    @Html.DisplayFor(modelItem => item.EventName)
+                    <!--@Html.ActionLink(item.EventName, "Details")-->
                 </div>
                 <div class="panel-body">
-                    @Html.DisplayFor(modelItem => item.EventType)
+                    <p>Event Type: @Html.DisplayFor(modelItem => item.EventType)</p>
                     <div>
-                        @Html.DisplayFor(modelItem => item.EventDateTime)
+                        <p>Date/Time: @Html.DisplayFor(modelItem => item.EventDateTime)</p>
+                    </div>
+                    <div class="event-options">
+                        <a href="Event/Details/@item.EventId">Details | </a>
+                        <a href="/Event/Edit/@item.EventId">Edit | </a>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
                     </div>
                 </div>
             </div>
@@ -40,7 +47,7 @@
 
 </div>
 
-<table class="table">
+<!--<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.EventId)
@@ -80,4 +87,4 @@
         </tr>
     }
 
-</table>
+</table> -->
