@@ -4,11 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<div class="event-header"><h2>My Events</h2></div>
+<div class="event-header">My Events</div>  <!--<h2>-->
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="create-new-event">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
 
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -23,7 +25,6 @@
 <div class="event-board">
     @foreach (var item in Model)
     {
-
         <div class="card-container col-md-4 col-sm-6">
             <div class="panel">
                 <div class="panel-heading">

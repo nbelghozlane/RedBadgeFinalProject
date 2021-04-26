@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Expense Tracker</h2>
+<div class="expense-header">Expense Tracker</div>
 
 <p>
     @Html.ActionLink("Create New", "CreateExpense")
@@ -21,7 +21,34 @@
     </div>
 }
 
-<table class="table">
+<div class="expense-board">
+    @foreach (var item in Model)
+    {
+        <div class="expense-container col-md-12 col-sm-6">
+            <div class="panel">
+                <div class="panel-heading">
+                    @Html.DisplayFor(modelItem => item.ExpenseType) |
+                    @Html.DisplayFor(modelItem => item.Event)
+                </div>
+                <div class="panel-body">
+                    @Html.DisplayFor(modelItem => item.Description)
+                    <div>
+                        <p>Budget: $@Html.DisplayFor(modelItem => item.Budget)</p>
+                        <p>Actual Amount: $@Html.DisplayFor(modelItem => item.ActualAmount)</p>
+                    </div>
+                    <div class="expense-options">
+                        <a href="Expense/ExpenseDetails/@item.ExpenseId">Details | </a>
+                        <a href="/Expense/EditExpense/@item.ExpenseId">Edit | </a>
+                        @Html.ActionLink("Delete", "DeleteExpense", new { id = item.ExpenseId })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<!--<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ExpenseId)
@@ -38,9 +65,9 @@
         <th>
             @Html.DisplayNameFor(model => model.ActualAmount)
         </th>
-        <!-- <th>
+        <th>
         @Html.DisplayNameFor(model => model.EventId)
-        </th> -->
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Event)
         </th>
@@ -65,9 +92,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ActualAmount)
             </td>
-            <!--<td>
+            <td>
                 @Html.DisplayFor(modelItem => item.EventId)
-            </td>-->
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Event)
             </td>
@@ -79,4 +106,4 @@
         </tr>
     }
 
-</table>
+</table>-->
