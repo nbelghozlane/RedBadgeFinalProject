@@ -74,7 +74,7 @@ namespace RedBadgeFinalProject.Services
                                     }).ToList()
 
                             });
-                           
+
                 return query.ToArray();
 
             }
@@ -95,13 +95,26 @@ namespace RedBadgeFinalProject.Services
                         EventName = entity.EventName,
                         EventType = entity.EventType,
                         Location = entity.Location,
-                        EventDateTime = entity.EventDateTime
+                        EventDateTime = entity.EventDateTime,
+                        Guests = entity.Guests //
+                            .Select(g => new GuestListItem
+                            {
+                                GuestId = g.GuestId,
+                                FullName = g.FullName
+                            }).ToList(),
+
+                        Expenses = entity.Expenses  //
+                            .Select(
+                                exp => new ExpenseListItem
+                                {
+                                    ExpenseId = exp.ExpenseId,
+                                    Description = exp.Description
+                                }).ToList()
                     };
             }
-
         }
 
-        public bool UpdateEvent (EventEdit model)
+        public bool UpdateEvent(EventEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {

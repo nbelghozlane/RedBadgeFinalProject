@@ -6,9 +6,11 @@
 
 <div class="expense-header">Expense Tracker</div>
 
-<p>
-    @Html.ActionLink("Create New", "CreateExpense")
-</p>
+<div class="create-new-expense">
+    <p>
+        <a href="/Expense/CreateExpense"><img src="~/Content/Assets/createicon.png" /></a>
+    </p>
+</div>
 
 @if (TempData.ContainsKey("SaveResult"))
 {
