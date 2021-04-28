@@ -97,7 +97,34 @@ textarea {
 }
 
 .table{
+    background-color: white; /*temporary to see*/
+}
+
+.navbar{
+    
+}
+
+.about-contact-page{
     background-color: white;
+    padding: 10px 50px 50px 50px;
+    color: darkblue;
+    font-size: 25px;
+    text-align: center;
+}
+
+.about-contact-header{
+    background-color: white;
+    text-align: center;
+    color: darkblue;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.panel-subheading{
+    background-color: lightblue; /*light gray?*/
+    font-size: 20px;
+    color: darkblue;
 }
 
 
