@@ -55,22 +55,20 @@ namespace RedBadgeFinalProject.Services
                                 EventType = e.EventType,
                                 EventDateTime = e.EventDateTime,
 
-                                Guests = e.Guests  //
+                                Guests = e.Guests
                                     .Select(
                                     g => new GuestListItem
                                     {
                                         GuestId = g.GuestId,
                                         FullName = g.FullName
-
                                     }).ToList(),
 
-                                Expenses = e.Expenses  //
+                                Expenses = e.Expenses  
                                     .Select(
                                     exp => new ExpenseListItem
                                     {
                                         ExpenseId = exp.ExpenseId,
                                         Description = exp.Description
-
                                     }).ToList()
 
                             });

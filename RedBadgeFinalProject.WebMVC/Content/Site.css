@@ -59,9 +59,13 @@ textarea {
     /*backdrop-filter: opacity();*/
 }
 
-.footer navbar-fixed-bottom {
+.footer {
     text-align: center;
-    color: white;
+    background-color: whitesmoke;
+    color: darkslategray;
+    font-size: 18px;
+    padding-top: 22px;
+    border: 2px solid darkslategray;
 }
 
 .home-page-head {
@@ -71,6 +75,15 @@ textarea {
     background-color: pink;
     /*font-family: Brush Script MT, Brush Script Std, cursive;
        font-size: 75px;*/
+}
+
+.home-page-subheadings{
+    background-color: white;
+    text-align: center;
+    border: 5px solid black;
+    padding: 100px 50px 80px 50px;
+   
+    
 }
 
 .expense-header {
