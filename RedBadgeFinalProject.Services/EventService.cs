@@ -106,7 +106,8 @@ namespace RedBadgeFinalProject.Services
                                 exp => new ExpenseListItem
                                 {
                                     ExpenseId = exp.ExpenseId,
-                                    Description = exp.Description
+                                    Description = exp.Description,
+                                    ActualAmount = exp.ActualAmount
                                 }).ToList()
                     };
             }

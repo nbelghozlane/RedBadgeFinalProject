@@ -71,19 +71,31 @@ textarea {
 .home-page-head {
     text-align: center;
     color: darkslateblue;
+    font-weight: bold;
     padding: 50px 50px 50px 50px;
     background-color: pink;
-    /*font-family: Brush Script MT, Brush Script Std, cursive;
-       font-size: 75px;*/
+    border: 2px solid darkslategray;
+    /*font-family: Brush Script MT, Brush Script Std, cursive;*/
+    border-radius: 2em;
+}
+
+.home-container{
+    padding: 50px 50px 50px 50px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    background-color: white;
+    border: 5px solid darkslategray;
+    border-radius: 2em;
+    opacity: 0.95;
 }
 
 .home-page-subheadings{
     background-color: white;
+    opacity: 0.93;
     text-align: center;
-    border: 5px solid black;
-    padding: 100px 50px 80px 50px;
-   
-    
+    border: 5px solid darkslategray;
+    padding: 100px 50px 150px 70px;
+    border-radius: 2em;
 }
 
 .expense-header {
@@ -97,7 +109,8 @@ textarea {
 
 .btn{
     background-color: darkblue;
-    border: 3px dotted white;
+    border: 3px solid lightblue;
+    color: white;
 }
 
 .guest-header {
@@ -139,6 +152,8 @@ textarea {
     font-size: 20px;
     color: darkblue;
 }
+
+
 
 
 
