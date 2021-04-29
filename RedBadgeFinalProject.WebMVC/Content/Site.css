@@ -72,30 +72,40 @@ textarea {
     text-align: center;
     color: darkslateblue;
     font-weight: bold;
-    padding: 50px 50px 50px 50px;
+    padding: 50px 50px 30px 50px;
     background-color: pink;
-    border: 2px solid darkslategray;
-    /*font-family: Brush Script MT, Brush Script Std, cursive;*/
-    border-radius: 2em;
+    border: 3px dotted lavender;
+    font-family: 'Brush Script MT';
+    font-size: 75px;
+    /*font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: px;*/
+    border-radius: 1em;
 }
 
 .home-container{
     padding: 50px 50px 50px 50px;
-    margin-bottom: 40px;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     background-color: white;
     border: 5px solid darkslategray;
     border-radius: 2em;
-    opacity: 0.95;
+    opacity: 0.91;
 }
 
 .home-page-subheadings{
-    background-color: white;
+    background-color: pink;
     opacity: 0.93;
     text-align: center;
-    border: 5px solid darkslategray;
-    padding: 100px 50px 150px 70px;
-    border-radius: 2em;
+    border: 3px dotted lavender;
+    padding: 50px 50px 150px 70px;
+    border-radius: 3em;
+    margin-top: 50px;
+}
+
+.lead {
+    font-family: 'Brush Script MT';
+    font-size: 45px;
+    font-weight: bold;
 }
 
 .expense-header {
@@ -111,6 +121,7 @@ textarea {
     background-color: darkblue;
     border: 3px solid lightblue;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .guest-header {
@@ -149,8 +160,23 @@ textarea {
 
 .panel-subheading{
     background-color: lightblue; /*light gray?*/
-    font-size: 20px;
+    font-size: 25px;
     color: darkblue;
+}
+
+.form-horizontal{
+    background-color: white;
+    font-size: 16px;
+    opacity: 0.96;
+    padding: 50px 50px 50px 50px;
+    border-radius: 2em;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+   
 }
 
 
