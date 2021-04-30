@@ -36,7 +36,6 @@ namespace RedBadgeFinalProject.Data
         public int? EventId { get; set; }
         public virtual Event Event { get; set; }
 
-
         //public bool IsAttending { get; set; } // error Unable to cast object of type 'System.Boolean' to type 'System.Array'.
         //Create drop down list?
     }

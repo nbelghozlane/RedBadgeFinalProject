@@ -4,11 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Event Details</h2>
 
 <div>
-    <h4>EventDetail</h4>
-    <hr />
+    <h4></h4>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.EventId)
@@ -56,7 +55,7 @@
             <!--@Html.DisplayFor(model => model.Guests)-->
             @foreach (var guest in Model.Guests)
             {
-                @Html.DisplayFor( model => guest.FullName)<br>
+                @Html.DisplayFor(model => guest.FullName)<br>
             }
         </dd>
         <dt>
@@ -71,10 +70,10 @@
         </dd>
     </dl>
 </div>
-<p>
+<div class="event-details-options">
     @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
-    <a href="/Guest"> View Guests | </a>
-    <a href="/Expense"> View Expenses | </a>
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <a href="/Guest"> View All Guests | </a>
+    <a href="/Expense"> View All Expenses | </a>
+    @Html.ActionLink("Back to Events", "Index")
+</div>
 

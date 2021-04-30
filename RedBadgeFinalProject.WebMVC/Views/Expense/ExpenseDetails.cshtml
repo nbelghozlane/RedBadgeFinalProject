@@ -4,11 +4,10 @@
     ViewBag.Title = "ExpenseDetails";
 }
 
-<h2>ExpenseDetails</h2>
+<h2>Expense Details</h2>
 
 <div>
-    <h4>ExpenseDetail</h4>
-    <hr />
+    <h4></h4>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.ExpenseId)
@@ -70,5 +69,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "EditExpense", new { id = Model.ExpenseId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Expenses", "Index")
 </p>
