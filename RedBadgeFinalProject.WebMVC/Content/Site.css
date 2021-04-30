@@ -35,11 +35,12 @@ textarea {
 }
 
 .panel {
-    border: 3px solid black;
+    border: 2px solid black;
     text-align: center;
     font-size: 18px;
     border-radius: 1em;
     overflow: hidden;
+    box-shadow: 0 0 20px pink;
 }
 
 .panel-heading {
@@ -54,7 +55,7 @@ textarea {
     font-size: 25px;
 }*/
 
-.event-board{
+.event-board {
     
     /*backdrop-filter: opacity();*/
 }
@@ -78,11 +79,12 @@ textarea {
     font-family: 'Brush Script MT';
     font-size: 75px;
     /*font-family: Brush Script MT, Brush Script Std, cursive;
-    font-size: px;*/
+    */
     border-radius: 1em;
+    box-shadow: 0 0 20px black; /*gray?*/
 }
 
-.home-container{
+.home-container {
     padding: 50px 50px 50px 50px;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -90,9 +92,10 @@ textarea {
     border: 5px solid darkslategray;
     border-radius: 2em;
     opacity: 0.91;
+    box-shadow: 0 0 40px black; /*white?*/
 }
 
-.home-page-subheadings{
+.home-page-subheadings {
     background-color: pink;
     opacity: 0.93;
     text-align: center;
@@ -100,6 +103,7 @@ textarea {
     padding: 50px 50px 150px 70px;
     border-radius: 3em;
     margin-top: 50px;
+    box-shadow: 0 0 20px black;
 }
 
 .lead {
@@ -117,7 +121,7 @@ textarea {
     padding-top: 1em;
 }
 
-.btn{
+.btn {
     background-color: darkblue;
     border: 3px solid lightblue;
     color: white;
@@ -133,23 +137,20 @@ textarea {
     padding-top: 1em;
 }
 
-.table{
-    background-color: white; /*temporary to see*/
-}
-
-.navbar{
+.navbar {
     
 }
 
-.about-contact-page{
+.about-contact-page {
     background-color: white;
     padding: 10px 50px 50px 50px;
     color: darkblue;
     font-size: 25px;
     text-align: center;
+    /*box-shadow: 0 0 20px black;*/
 }
 
-.about-contact-header{
+.about-contact-header {
     background-color: white;
     text-align: center;
     color: darkblue;
@@ -158,32 +159,42 @@ textarea {
     padding-top: 20px;
 }
 
-.panel-subheading{
+.panel-subheading {
     background-color: lightblue; /*light gray?*/
     font-size: 25px;
     color: darkblue;
 }
 
-.form-horizontal{
-    background-color: white;
+.form-horizontal {
+    background-color: aliceblue; /*white*/
     font-size: 16px;
     opacity: 0.96;
     padding: 50px 50px 50px 50px;
     border-radius: 2em;
+    box-shadow: 0 0 40px black;
 }
 
-h2{
+h2 {
     color: white;
     text-align: center;
     font-size: 45px;
 }
 
 .dl-horizontal {
-    background-color: white;
+    background-color: aliceblue;
     font-size: 16px;
     opacity: 0.96;
     padding: 50px 50px 50px 50px;
     border-radius: 2em;
+}
+
+.details-delete-options {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    text-align: center;
+    border-radius: 2em;
+    font-size: 20px;
 }
 
 
