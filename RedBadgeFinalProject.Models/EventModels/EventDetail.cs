@@ -26,7 +26,6 @@ namespace RedBadgeFinalProject.Models.EventModels
         public DateTimeOffset EventDateTime { get; set; }
 
         public virtual List<GuestListItem> Guests { get; set; } = new List<GuestListItem>();
-       // public string FullName { get; set; }//
 
         public virtual List<ExpenseListItem> Expenses { get; set; } = new List<ExpenseListItem>();
     }

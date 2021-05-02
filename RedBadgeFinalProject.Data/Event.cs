@@ -34,7 +34,5 @@ namespace RedBadgeFinalProject.Data
 
         public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
 
-        //public virtual List<Guest> Guests { get; set; } = new List<Guest>();
-
     }
 }

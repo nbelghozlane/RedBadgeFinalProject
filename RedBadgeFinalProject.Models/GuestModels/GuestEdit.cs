@@ -31,8 +31,6 @@ namespace RedBadgeFinalProject.Models.GuestModels
         [Required]
         public string IsAttending { get; set; }
 
-        //public bool? IsAttending { get; set; }
-
         [Display(Name = "Event ID")]
         [Required]
         public int? EventId { get; set; }

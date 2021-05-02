@@ -4,7 +4,26 @@
 <div class="about-contact-header">@ViewBag.Title</div>
 
 <div class="about-contact-page">
-    <h3>Questions or concerns? Feel free to send me an email at nbelghoz@gmail.com.</h3>
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xknkozww"
+              method="POST">
+            <div class="name">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" name="message" class="form-control" placeholder="Full Name" required="" />
+            </div>
+            <br>
+            <div class="email">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" name="_replyto" class="form-control" placeholder="E-mail" required="" />
+            </div>
+            <br>
+            <div class="message">
+                <label for="message" class="form-label">Message</label>
+                <textarea name="message" class="form-control" placeholder="Message" rows="6" required=""></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </div>
 
 <!--<h3>@ViewBag.Message</h3>

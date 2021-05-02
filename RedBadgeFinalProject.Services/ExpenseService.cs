@@ -83,7 +83,7 @@ namespace RedBadgeFinalProject.Services
                         ActualAmount = entity.ActualAmount,
                         PaymentMethod = entity.PaymentMethod,
                         EventId = entity.EventId,
-                        Event = entity.Event.EventId + " " + entity.Event.EventName //
+                        Event = entity.Event.EventId + " " + entity.Event.EventName
                     };
             }
         }

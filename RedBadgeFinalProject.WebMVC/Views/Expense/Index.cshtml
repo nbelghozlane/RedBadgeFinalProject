@@ -33,10 +33,10 @@
                     @Html.DisplayFor(modelItem => item.Event)
                 </div>
                 <div class="panel-body">
-                    @Html.DisplayFor(modelItem => item.Description)
+                    @Html.DisplayFor(modelItem => item.Description) 
                     <div>
-                        <p>Budget: $@Html.DisplayFor(modelItem => item.Budget)</p>
-                        <p>Actual Amount: $@Html.DisplayFor(modelItem => item.ActualAmount)</p>
+                        <p>Budget: $@Html.DisplayFor(modelItem => item.Budget) |  
+                        Actual Amount: $@Html.DisplayFor(modelItem => item.ActualAmount)</p>
                     </div>
                     <div class="expense-options">
                         <a href="Expense/ExpenseDetails/@item.ExpenseId">Details | </a>

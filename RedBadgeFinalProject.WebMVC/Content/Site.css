@@ -74,7 +74,7 @@ textarea {
     color: darkslateblue;
     font-weight: bold;
     padding: 50px 50px 30px 50px;
-    background-color: pink;
+    background-color: lightpink;
     border: 3px dotted lavender;
     font-family: 'Brush Script MT';
     font-size: 75px;
@@ -96,7 +96,7 @@ textarea {
 }
 
 .home-page-subheadings {
-    background-color: pink;
+    background-color: lightpink;
     opacity: 0.93;
     text-align: center;
     border: 3px dotted lavender;
@@ -147,16 +147,19 @@ textarea {
     color: darkblue;
     font-size: 25px;
     text-align: center;
-    /*box-shadow: 0 0 20px black;*/
+    box-shadow: 0 0 40px black;
+    border-radius: 2em;
+    border: 3px solid darkslategray;
+    opacity: 0.95;
 }
 
 .about-contact-header {
-    background-color: white;
     text-align: center;
-    color: darkblue;
+    color: white;
     font-size: 50px;
     font-weight: bold;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .panel-subheading {
@@ -166,11 +169,12 @@ textarea {
 }
 
 .form-horizontal {
-    background-color: aliceblue; /*white*/
+    background-color: white; /*white*/
     font-size: 16px;
     opacity: 0.96;
     padding: 50px 50px 50px 50px;
     border-radius: 2em;
+    border: 3px solid darkslategray;
     box-shadow: 0 0 40px black;
 }
 
@@ -181,23 +185,39 @@ h2 {
 }
 
 .dl-horizontal {
-    background-color: aliceblue;
+    background-color: white;
     font-size: 16px;
     opacity: 0.96;
     padding: 50px 50px 50px 50px;
     border-radius: 2em;
+    border: 3px solid darkslategray;
+    box-shadow: 0 0 40px black;
 }
 
 .details-delete-options {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: white;
     text-align: center;
     border-radius: 2em;
     font-size: 20px;
+    border: 3px solid darkslategray;
+    box-shadow: 0 0 40px black;
 }
 
+.guest-expenses-display{
+    padding-top: 20px;
 
+}
+
+dt {
+    font-size: 20px;
+    color: darkslateblue;
+}
+
+dd{
+    font-size: 18px;
+}
 
 
 

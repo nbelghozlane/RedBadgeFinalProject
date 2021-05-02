@@ -94,14 +94,14 @@ namespace RedBadgeFinalProject.Services
                         EventType = entity.EventType,
                         Location = entity.Location,
                         EventDateTime = entity.EventDateTime,
-                        Guests = entity.Guests //
+                        Guests = entity.Guests 
                             .Select(g => new GuestListItem
                             {
                                 GuestId = g.GuestId,
                                 FullName = g.FullName
                             }).ToList(),
 
-                        Expenses = entity.Expenses  //
+                        Expenses = entity.Expenses 
                             .Select(
                                 exp => new ExpenseListItem
                                 {
