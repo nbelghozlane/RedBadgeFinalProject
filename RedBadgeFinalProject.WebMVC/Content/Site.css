@@ -1,8 +1,9 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url('Assets/billy-huynh-W8KTS-mhFUE-unsplash.jpg');
+    background-image: url('Assets/billy-huynh-W8KTS-mhFUE-unsplash_cropped.jpg')
 }
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -47,17 +48,8 @@ textarea {
     text-align: center;
     color: white;
     font-weight: bold;
-    background-color: lightpink; 
+    background-color: lightpink;
     font-size: 25px;
-}
-
-/*.create-new-event {
-    font-size: 25px;
-}*/
-
-.event-board {
-    
-    /*backdrop-filter: opacity();*/
 }
 
 .footer {
@@ -137,11 +129,7 @@ textarea {
     padding-top: 1em;
 }
 
-.navbar {
-    
-}
-
-.about-contact-page {
+.about-page {
     background-color: white;
     padding: 10px 50px 50px 50px;
     color: darkblue;
@@ -151,6 +139,20 @@ textarea {
     border-radius: 2em;
     border: 3px solid darkslategray;
     opacity: 0.95;
+}
+
+.contact-page {
+    background-color: white;
+    padding: 20px 10px 20px 50px;
+    color: darkblue;
+    font-size: 25px;
+    text-align: left;
+    text-align: justify;
+    box-shadow: 0 0 40px black;
+    border-radius: 2em;
+    border: 3px solid darkslategray;
+    opacity: 0.95;
+    /*top right bottom left*/
 }
 
 .about-contact-header {
@@ -184,6 +186,23 @@ h2 {
     font-size: 45px;
 }
 
+h3 {
+    text-align: center;
+}
+
+h4 {
+    color: black;
+    font-size: 22px;
+    text-align: center;
+}
+
+.manage-settings {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+
 .dl-horizontal {
     background-color: white;
     font-size: 16px;
@@ -205,9 +224,8 @@ h2 {
     box-shadow: 0 0 40px black;
 }
 
-.guest-expenses-display{
+.guest-expenses-display {
     padding-top: 20px;
-
 }
 
 dt {
@@ -215,9 +233,44 @@ dt {
     color: darkslateblue;
 }
 
-dd{
+dd {
     font-size: 18px;
 }
 
+.form-label {
+    text-align: left;
+}
 
+@media (min-width: 768px) { /*drop down is invisible*/
+    .navbar-nav {
+        float: none;
+        margin: 0 auto;
+        margin-top: 0px;
+        display: flex;
+        table-layout: fixed;
+        padding: 0px 50px 2px 50px;
+        background-color: whitesmoke;
+        font-size: 18px;
+        border: 1px solid darkslategray;
+        opacity: .90;
+    }
 
+    .push {
+        margin-left: auto;
+    }
+
+    .nav li a:hover {
+        color: white;
+        background-color: palevioletred;
+    }
+
+    nav li a:visited {
+        color: black;
+    }
+}
+
+    .btn:hover {
+        background-color: aliceblue;
+        color: black;
+        font-weight: bold;
+    }

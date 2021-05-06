@@ -19,10 +19,6 @@ namespace RedBadgeFinalProject.Data
             // Add custom user claims here
             return userIdentity;
         }
-
-        //public virtual ICollection<Guest> Guests { get; set; }
-        //public virtual ICollection<Expense> Expenses { get; set; }
-        
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

@@ -183,12 +183,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Assets\billy-huynh-W8KTS-mhFUE-unsplash.jpg" />
+    <Content Include="Content\Assets\billy-huynh-W8KTS-mhFUE-unsplash_cropped.jpg" />
     <Content Include="Content\Assets\createicon.png" />
     <Content Include="Content\Assets\didssph-zHhWYQunRO4-unsplash.jpg" />
     <Content Include="Content\Assets\goldglitter.jpg" />
+    <Content Include="Content\Assets\pawel-czerwinski-Qiy4hr18aGs-unsplashcropped.jpg" />
     <Content Include="Content\Assets\peopleicon.png" />
-    <Content Include="Content\Assets\pexels-miguel-á-padriñán-255379.jpg" />
     <Content Include="Content\Assets\piggiebank.png" />
+    <Content Include="Content\Assets\pinkpawel-czerwinski-2PN18U8CKi0-unsplash %281%29.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
