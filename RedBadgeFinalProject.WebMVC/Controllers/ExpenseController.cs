@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using RedBadgeFinalProject.Data;
 using RedBadgeFinalProject.Models.ExpenseModels;
 using RedBadgeFinalProject.Services;
 using System;
@@ -41,7 +42,7 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "The expense could not be created.");
+            ModelState.AddModelError("", "The expense could not be created. The event ID you entered may be invalid.");
 
             return View(model);
         }
@@ -94,8 +95,9 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your expense could not be updated.");
+            ModelState.AddModelError("", "Your expense could not be updated. The event ID you entered may be invalid.");
             return View(model);
+
         }
 
         [ActionName("DeleteExpense")]

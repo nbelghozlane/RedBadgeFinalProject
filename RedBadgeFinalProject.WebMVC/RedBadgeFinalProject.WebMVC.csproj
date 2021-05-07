@@ -193,11 +193,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Assets\billy-huynh-W8KTS-mhFUE-unsplash.jpg" />
+    <Content Include="Content\Assets\amy-shamblen-lJt-3NUFng4-unsplash.jpg" />
     <Content Include="Content\Assets\billy-huynh-W8KTS-mhFUE-unsplash_cropped.jpg" />
     <Content Include="Content\Assets\createicon.png" />
     <Content Include="Content\Assets\didssph-zHhWYQunRO4-unsplash.jpg" />
-    <Content Include="Content\Assets\goldglitter.jpg" />
     <Content Include="Content\Assets\pawel-czerwinski-Qiy4hr18aGs-unsplashcropped.jpg" />
     <Content Include="Content\Assets\peopleicon.png" />
     <Content Include="Content\Assets\piggiebank.png" />

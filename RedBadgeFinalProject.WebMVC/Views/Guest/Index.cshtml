@@ -41,61 +41,9 @@
                             <a href="/Guest/EditGuest/@item.GuestId">Edit | </a>
                             @Html.ActionLink("Delete", "DeleteGuest", new { id = item.GuestId })
                         </div>
-                        <!--<div class="panel-footer">
-                    @Html.DisplayFor(modelItem => item.Event)
-                </div>-->
                     </div>
                 </div>
             </div>
         }
 
     </div>
-
-
-    <!--<table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.GuestId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsAttending)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Event)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GuestId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FullName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsAttending)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Event)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "EditGuest", new { id = item.GuestId }) |
-                    @Html.ActionLink("Details", "GuestDetails", new { id = item.GuestId }) |
-                    @Html.ActionLink("Delete", "DeleteGuest", new { id = item.GuestId })
-                </td>
-            </tr>
-        }
-
-    </table>-->
