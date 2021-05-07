@@ -33,10 +33,15 @@
                     @Html.DisplayFor(modelItem => item.Event)
                 </div>
                 <div class="panel-body">
-                    @Html.DisplayFor(modelItem => item.Description) 
+                    @Html.DisplayFor(modelItem => item.Description)
                     <div>
-                        <p>Budget: $@Html.DisplayFor(modelItem => item.Budget) |  
-                        Actual Amount: $@Html.DisplayFor(modelItem => item.ActualAmount)</p>
+                        <p>
+                            Budget: $@Html.DisplayFor(modelItem => item.Budget) |
+                            Actual Amount: $@Html.DisplayFor(modelItem => item.ActualAmount)
+                        </p>
+                    </div>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.IsPurchased, new { id = item.ExpenseId })
                     </div>
                     <div class="expense-options">
                         <a href="Expense/ExpenseDetails/@item.ExpenseId">Details | </a>
@@ -50,62 +55,32 @@
 
 </div>
 
-<!--<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ExpenseId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExpenseType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Budget)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ActualAmount)
-        </th>
-        <th>
-        @Html.DisplayNameFor(model => model.EventId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Event)
-        </th>
-        <th></th>
-    </tr>
+@section scripts {
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("i[data-toggle='ok']")
+                .css({ "cursor": "pointer" })
+                .click(function (e) {
+                    var target = $(e.target);
+                    var expenseId = target.attr("data-id");
+                    var checkmarkSet = target.hasClass("glyphicon-ok-circle");
+                    /*glyphicon-ok-circle*/
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpenseId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpenseType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Budget)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ActualAmount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EventId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Event)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "EditExpense", new { id = item.ExpenseId }) |
-                @Html.ActionLink("Details", "ExpenseDetails", new { id = item.ExpenseId }) |
-                @Html.ActionLink("Delete", "DeleteExpense", new { id = item.ExpenseId })
-            </td>
-        </tr>
-    }
+                    $.ajax({
+                        method: checkmarkSet ? "DELETE" : "PUT",
+                        url: "/api/Expense/" + expenseId + "/IsPurchased",
+                        data: null
+                    })
+                        .done(function (r) {
+                            target.removeClass();
+                            target.addClass("glyphicon" + (checkmarkSet ? "glyphicon-ok-circle" : "glyphicon-ok-sign"));
+                        })
+                        .fail(function (r) {
+                            alert("Failed to change Is Purchased status");
+                        });
+                });
+        });
+    </script>
+}
 
-</table>-->
+<!--"glyphicon-ok-circle" : "glyphicon-ok-sign"-->

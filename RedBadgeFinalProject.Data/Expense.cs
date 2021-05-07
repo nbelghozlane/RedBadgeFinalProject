@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -28,6 +29,9 @@ namespace RedBadgeFinalProject.Data
         [MaxLength(12, ErrorMessage = "Please enter 12 characters or less.")]
         public string PaymentMethod { get; set; }
 
+        [DefaultValue(false)]
+        public bool IsPurchased { get; set; }
+
         [Required]
         public Guid OwnerId { get; set; }
 
@@ -35,7 +39,6 @@ namespace RedBadgeFinalProject.Data
         public int? EventId { get; set; } //
         public virtual Event Event { get; set; } //
 
-        //public bool IsPurchased { get; set; }
-        //Add date of purchase?
+        
     }
 }

@@ -34,7 +34,7 @@ namespace RedBadgeFinalProject.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Expenses.Add(entity);
-                return ctx.SaveChanges() == 1; //error when creating expense
+                return ctx.SaveChanges() == 1;
             }
         }
 
@@ -56,7 +56,8 @@ namespace RedBadgeFinalProject.Services
                                 Budget = e.Budget,
                                 ActualAmount = e.ActualAmount,
                                 EventId = e.EventId,
-                                Event = e.Event.EventId + " " + e.Event.EventName
+                                Event = e.Event.EventId + " " + e.Event.EventName,
+                                IsPurchased = e.IsPurchased
                             }
                         );
 
@@ -103,6 +104,7 @@ namespace RedBadgeFinalProject.Services
                 entity.ActualAmount = model.ActualAmount;
                 entity.PaymentMethod = model.PaymentMethod;
                 entity.EventId = model.EventId;
+                entity.IsPurchased = model.IsPurchased;
 
                 return ctx.SaveChanges() == 1;
             }

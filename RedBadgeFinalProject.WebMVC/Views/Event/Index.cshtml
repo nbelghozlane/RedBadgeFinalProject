@@ -31,7 +31,7 @@
                     @Html.DisplayFor(modelItem => item.EventName)
                 </div>
                 <div class="panel-body">
-                    <p>Event Type: @Html.DisplayFor(modelItem => item.EventType)</p>
+                    <p>Location: @Html.DisplayFor(modelItem => item.Location)</p>
                     <div>
                         <p>Date/Time: @Html.DisplayFor(modelItem => item.EventDateTime)</p>
                     </div>
@@ -82,7 +82,7 @@
             @Html.DisplayNameFor(model => model.EventName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EventType)
+            @Html.DisplayNameFor(model => model.Location)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EventDateTime)
@@ -100,7 +100,7 @@
                 @Html.DisplayFor(modelItem => item.EventName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EventType)
+                @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EventDateTime)

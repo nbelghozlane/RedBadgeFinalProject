@@ -252,7 +252,8 @@ dd {
         background-color: whitesmoke;
         font-size: 18px;
         border: 1px solid darkslategray;
-        opacity: .90;
+        opacity: 0.96;
+
     }
 
     .push {

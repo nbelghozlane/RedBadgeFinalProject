@@ -54,8 +54,6 @@
                 @Html.DisplayNameFor(model => model.Guests)
             </dt>
             <dd>
-
-                <!--@Html.DisplayFor(model => model.Guests)-->
                 @foreach (var guest in Model.Guests)
                 {
                     @Html.DisplayFor(model => guest.FullName)<br>
@@ -84,26 +82,3 @@
     <a href="/Expense"> View All Expenses | </a>
     @Html.ActionLink("Back to Events", "Index")
 </div>
-
-<!--
-<dt>
-    @Html.DisplayNameFor(model => model.Guests)
-</dt>
-<dd>
-    <!--@Html.DisplayFor(model => model.Guests)
-@foreach (var guest in Model.Guests)
-{
-    @Html.DisplayFor(model => guest.FullName)
-    <br>
-}
-</dd>
-<dt>
-    @Html.DisplayNameFor(model => model.Expenses)
-</dt>
-<dd>
-    @foreach (var expense in Model.Expenses)
-    {
-        @Html.DisplayFor(model => expense.Description)
-        <p> Amount Spent: $ @Html.DisplayFor(model => expense.ActualAmount)</p><br>
-    }
-</dd>-->

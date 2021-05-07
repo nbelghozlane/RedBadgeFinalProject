@@ -17,8 +17,7 @@ namespace RedBadgeFinalProject.Models.EventModels
         [Display(Name = "Event Name")]
         public string EventName { get; set; }
 
-        [Display(Name = "Event Type (birthday, wedding, etc.)")]
-        public string EventType { get; set; }
+        public string Location { get; set; }
 
         [Display(Name = "Event Date & Time")]
         public DateTimeOffset EventDateTime { get; set; }

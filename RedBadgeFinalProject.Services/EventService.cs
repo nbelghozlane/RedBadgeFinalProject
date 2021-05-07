@@ -52,7 +52,7 @@ namespace RedBadgeFinalProject.Services
                             {
                                 EventId = e.EventId,
                                 EventName = e.EventName,
-                                EventType = e.EventType,
+                                Location = e.Location,
                                 EventDateTime = e.EventDateTime,
 
                                 Guests = e.Guests
