@@ -12,7 +12,7 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
 {
     public class ExpenseController : Controller
     {
-        // GET: Expense
+
         [Authorize]
         public ActionResult Index()
         {

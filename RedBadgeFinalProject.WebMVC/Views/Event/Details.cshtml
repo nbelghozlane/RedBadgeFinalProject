@@ -7,7 +7,6 @@
 <h2>Event Details</h2>
 
 <div>
-    <h4></h4>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.EventId)
@@ -49,26 +48,29 @@
             @Html.DisplayFor(model => model.EventDateTime)
         </dd>
 
-        <div class="guest-expenses-display">
+        <div class="guest-display">
             <dt>
-                @Html.DisplayNameFor(model => model.Guests)
+                <!--<header class="guestheader">@Html.DisplayNameFor(model => model.Guests)</header>-->
             </dt>
             <dd>
+                <header class="guests-exp-header">Guests</header><br />
+                <p>@Model.Guests.Count() Guest(s) Invited:</p>
                 @foreach (var guest in Model.Guests)
                 {
-                    @Html.DisplayFor(model => guest.FullName)<br>
+                    <p>~ @Html.DisplayFor(model => guest.FullName)<br></p>
                 }
             </dd>
         </div>
 
-        <div class="guest-expenses-display">
+        <div class="expenses-display">
             <dt>
-                @Html.DisplayNameFor(model => model.Expenses)
+                <!--@Html.DisplayNameFor(model => model.Expenses)-->
             </dt>
             <dd>
+                <header class="guests-exp-header">Expenses</header><br />
                 @foreach (var expense in Model.Expenses)
                 {
-                    @Html.DisplayFor(model => expense.Description)
+                    <p> @Html.DisplayFor(model => expense.Description)</p>
                     <p> Amount Spent: $ @Html.DisplayFor(model => expense.ActualAmount)</p><br>
                 }
             </dd>

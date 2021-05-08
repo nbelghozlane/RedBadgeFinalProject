@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RedBadgeFinalProject.Services
 {
-    public class EventService
+    public class EventService : IEventService
     {
         private readonly Guid _userId;
 
@@ -24,6 +24,7 @@ namespace RedBadgeFinalProject.Services
             var entity =
                 new Event()
                 {
+                    //UserId =  _userId,
                     OwnerId = _userId,
                     EventName = model.EventName,
                     EventType = model.EventType,
@@ -45,6 +46,7 @@ namespace RedBadgeFinalProject.Services
                 var query =
                     ctx
                         .Events
+                        //.Where(e => e.UserId == _userId)
                         .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
@@ -54,6 +56,7 @@ namespace RedBadgeFinalProject.Services
                                 EventName = e.EventName,
                                 Location = e.Location,
                                 EventDateTime = e.EventDateTime,
+                                GuestsInvitedCount = e.Guests.Count(),
 
                                 Guests = e.Guests
                                     .Select(
@@ -63,7 +66,7 @@ namespace RedBadgeFinalProject.Services
                                         FullName = g.FullName
                                     }).ToList(),
 
-                                Expenses = e.Expenses  
+                                Expenses = e.Expenses
                                     .Select(
                                     exp => new ExpenseListItem
                                     {
@@ -71,7 +74,7 @@ namespace RedBadgeFinalProject.Services
                                         Description = exp.Description
                                     }).ToList()
 
-                            });
+                            }) ;
 
                 return query.ToArray();
 
@@ -85,7 +88,7 @@ namespace RedBadgeFinalProject.Services
                 var entity =
                     ctx
                         .Events
-                        .Single(e => e.EventId == id && e.OwnerId == _userId);
+                        .Single(e => e.EventId == id && e.OwnerId == _userId);  //Guid.Parse(_userId)
                 return
                     new EventDetail
                     {
@@ -94,14 +97,14 @@ namespace RedBadgeFinalProject.Services
                         EventType = entity.EventType,
                         Location = entity.Location,
                         EventDateTime = entity.EventDateTime,
-                        Guests = entity.Guests 
+                        Guests = entity.Guests
                             .Select(g => new GuestListItem
                             {
                                 GuestId = g.GuestId,
                                 FullName = g.FullName
                             }).ToList(),
 
-                        Expenses = entity.Expenses 
+                        Expenses = entity.Expenses
                             .Select(
                                 exp => new ExpenseListItem
                                 {

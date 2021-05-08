@@ -29,5 +29,8 @@ namespace RedBadgeFinalProject.Models.EventModels
         [Required]
         [Display(Name = "Event Date/Time (Enter in following format: 8/31/2021 4:00 PM)")]
         public DateTimeOffset EventDateTime { get; set; }
+
+        public string UserId { get; set; }
+
     }
 }

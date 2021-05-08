@@ -36,5 +36,7 @@ namespace RedBadgeFinalProject.Models.GuestModels
         public int? EventId { get; set; }
 
         public string Event { get; set; }
+
+        //public string UserId { get; set; }
     }
 }

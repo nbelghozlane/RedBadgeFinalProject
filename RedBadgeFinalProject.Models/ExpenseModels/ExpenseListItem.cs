@@ -31,5 +31,7 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         [Display(Name = "Is Purchased")]
         public bool IsPurchased { get; set; }
 
+        //public string UserId { get; set; }
+
     }
 }

@@ -8,6 +8,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 80px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -224,17 +225,32 @@ h4 {
     box-shadow: 0 0 40px black;
 }
 
-.guest-expenses-display {
+.guest-display {
     padding-top: 20px;
+    text-align: left;
+}
+
+.expenses-display {
+    padding-top: 20px;
+    text-align: left;
+}
+
+.guests-exp-header {
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 27px;
+    text-decoration: underline;
+    text-align: left;
 }
 
 dt {
-    font-size: 20px;
+    font-size: 22px;
     color: darkslateblue;
 }
 
 dd {
-    font-size: 18px;
+    font-size: 20px;
+    color: black;
 }
 
 .form-label {

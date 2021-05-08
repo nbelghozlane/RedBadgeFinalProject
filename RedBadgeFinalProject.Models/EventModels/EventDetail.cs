@@ -28,5 +28,7 @@ namespace RedBadgeFinalProject.Models.EventModels
         public virtual List<GuestListItem> Guests { get; set; } = new List<GuestListItem>();
 
         public virtual List<ExpenseListItem> Expenses { get; set; } = new List<ExpenseListItem>();
+
+        public string UserId { get; set; }
     }
 }

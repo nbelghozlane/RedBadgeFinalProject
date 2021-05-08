@@ -29,5 +29,7 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
 
         [Display(Name = "Event ID")]
         public int? EventId { get; set; }
+
+        //public string UserId { get; set; }
     }
 }

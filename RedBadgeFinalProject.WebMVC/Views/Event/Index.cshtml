@@ -35,6 +35,9 @@
                     <div>
                         <p>Date/Time: @Html.DisplayFor(modelItem => item.EventDateTime)</p>
                     </div>
+                    <div>
+                        <p># Of Guests Invited: @Html.DisplayFor(modelItem => item.GuestsInvitedCount)</p>
+                    </div>
                     <div class="event-options">
                         <a href="Event/Details/@item.EventId">Details | </a>
                         <a href="/Event/Edit/@item.EventId">Edit | </a>

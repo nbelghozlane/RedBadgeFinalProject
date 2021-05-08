@@ -11,7 +11,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
 {
     public class GuestController : Controller
     {
-        // GET: Guest
         [Authorize]
         public ActionResult Index()
         {
@@ -20,7 +19,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
             return View(model);
         }
 
-        //Get
         public ActionResult CreateGuest()
         {
             return View();
