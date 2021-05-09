@@ -9,8 +9,7 @@ namespace RedBadgeFinalProject.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(RedBadgeFinalProject.Data.ApplicationDbContext context)

@@ -64,17 +64,18 @@
                     var target = $(e.target);
                     var expenseId = target.attr("data-id");
                     var checkmarkSet = target.hasClass("glyphicon-ok-sign");
-                    /*glyphicon-ok-circle*/
 
                     $.ajax({
                         method: checkmarkSet ? "DELETE" : "PUT",
                         url: "/api/Expense/" + expenseId + "/IsPurchased",
                         data: null
                     })
+
                         .done(function (r) {
                             target.removeClass();
                             target.addClass("glyphicon" + (checkmarkSet ? "glyphicon-ok-sign" : "glyphicon-star"));
                         })
+
                         .fail(function (r) {
                             alert("Failed to change Is Purchased status");
                         });
@@ -82,5 +83,3 @@
         });
     </script>
 }
-
-<!--"glyphicon-ok-circle" : "glyphicon-ok-sign"-->
