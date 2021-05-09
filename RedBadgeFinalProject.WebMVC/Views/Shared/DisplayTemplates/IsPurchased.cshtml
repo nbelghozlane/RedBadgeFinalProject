@@ -1,7 +1,14 @@
-﻿@model bool
+﻿
+@{ 
+    ViewBag.Title = "IsPurchased";
+}
+
+@model bool
 
 <span>
-    <i class="glyphicon @(Model ? "glyphicon-ok-circle" : "glyphicon-ok-sign")"
+    <i class="glyphicon @(Model ? "glyphicon-ok-sign" : "glyphicon-star")"
        data-toggle="ok"
        data-id="@ViewBag.Id"></i>
 </span>
+
+<!--circle/ok-sign-->

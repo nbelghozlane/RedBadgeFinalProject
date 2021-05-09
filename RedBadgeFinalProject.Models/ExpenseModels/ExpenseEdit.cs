@@ -37,7 +37,5 @@ namespace RedBadgeFinalProject.Models.ExpenseModels
         public int? EventId { get; set; }
 
         public bool IsPurchased { get; set; }
-
-        //public string UserId { get; set; }
     }
 }

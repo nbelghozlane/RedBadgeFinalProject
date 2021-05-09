@@ -29,9 +29,11 @@
         <div class="expense-container col-md-12 col-sm-6">
             <div class="panel">
                 <div class="panel-heading">
+                    @Html.DisplayFor(modelItem => item.IsPurchased, new { id = item.ExpenseId })
                     @Html.DisplayFor(modelItem => item.ExpenseType) |
                     @Html.DisplayFor(modelItem => item.Event)
                 </div>
+
                 <div class="panel-body">
                     @Html.DisplayFor(modelItem => item.Description)
                     <div>
@@ -40,9 +42,7 @@
                             Actual Amount: $@Html.DisplayFor(modelItem => item.ActualAmount)
                         </p>
                     </div>
-                    <div>
-                        @Html.DisplayFor(modelItem => item.IsPurchased, new { id = item.ExpenseId })
-                    </div>
+
                     <div class="expense-options">
                         <a href="Expense/ExpenseDetails/@item.ExpenseId">Details | </a>
                         <a href="/Expense/EditExpense/@item.ExpenseId">Edit | </a>
@@ -63,7 +63,7 @@
                 .click(function (e) {
                     var target = $(e.target);
                     var expenseId = target.attr("data-id");
-                    var checkmarkSet = target.hasClass("glyphicon-ok-circle");
+                    var checkmarkSet = target.hasClass("glyphicon-ok-sign");
                     /*glyphicon-ok-circle*/
 
                     $.ajax({
@@ -73,7 +73,7 @@
                     })
                         .done(function (r) {
                             target.removeClass();
-                            target.addClass("glyphicon" + (checkmarkSet ? "glyphicon-ok-circle" : "glyphicon-ok-sign"));
+                            target.addClass("glyphicon" + (checkmarkSet ? "glyphicon-ok-sign" : "glyphicon-star"));
                         })
                         .fail(function (r) {
                             alert("Failed to change Is Purchased status");

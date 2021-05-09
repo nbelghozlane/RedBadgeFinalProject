@@ -30,14 +30,16 @@
                 <div class="panel-heading">
                     @Html.DisplayFor(modelItem => item.EventName)
                 </div>
+
                 <div class="panel-body">
                     <p>Location: @Html.DisplayFor(modelItem => item.Location)</p>
                     <div>
-                        <p>Date/Time: @Html.DisplayFor(modelItem => item.EventDateTime)</p>
+                        <p>Date: @Html.DisplayFor(modelItem => item.EventDateTime)</p>
                     </div>
                     <div>
                         <p># Of Guests Invited: @Html.DisplayFor(modelItem => item.GuestsInvitedCount)</p>
                     </div>
+
                     <div class="event-options">
                         <a href="Event/Details/@item.EventId">Details | </a>
                         <a href="/Event/Edit/@item.EventId">Edit | </a>

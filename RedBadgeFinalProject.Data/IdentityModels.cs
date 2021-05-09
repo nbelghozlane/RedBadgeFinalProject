@@ -36,7 +36,6 @@ namespace RedBadgeFinalProject.Data
         public DbSet<Event> Events { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Expense> Expenses { get; set; }
-        // public DbSet<CheckList> CheckLists { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

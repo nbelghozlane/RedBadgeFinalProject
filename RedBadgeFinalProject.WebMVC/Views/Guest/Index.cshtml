@@ -28,14 +28,17 @@
                     <div class="panel-heading">
                         @Html.DisplayFor(modelItem => item.FullName)<br>
                     </div>
+
                     <div class="panel-subheading">
                         @Html.DisplayFor(modelItem => item.Event)
                     </div>
+
                     <div class="panel-body">
                         <p>Address: @Html.DisplayFor(modelItem => item.Address)</p>
                         <div>
                             <p>Is Attending: @Html.DisplayFor(modelItem => item.IsAttending)</p>
                         </div>
+
                         <div class="guest-options">
                             <a href="Guest/GuestDetails/@item.GuestId">Details | </a>
                             <a href="/Guest/EditGuest/@item.GuestId">Edit | </a>
