@@ -9,7 +9,8 @@
 *	Tracking event expenses (Type, description, budget vs. actual amount spent & payment method)
 
 ## **Using The Application** ##
-After downloading or cloning the application to your computer, run it in Visual Studio. This will open a web browser in which you’ll be able to interact with the app. 
+* To use through Azure: Go to https://redbadgefinalproject.azurewebsites.net/
+* To use in Visual Studio: After downloading or cloning the application to your computer, run it in Visual Studio. This will open a web browser in which you’ll be able to interact with the app. 
 *	Register for an account by either clicking the “Start Planning Now!” button on the Cheers! Home page or “Register” button in the upper right corner (navigation bar). 
 *	Events: Manage your events by clicking “Events” in the navigation bar at the top of the page or “Start Planning Now!” button on the Cheers! home page. This will take you to the page where all of your events will be displayed. To create an event, click on the white “+” icon in the upper left corner of the “My Events” page. Once you’ve created an event, you’ll have the options to view the details, edit or delete it. The guests and expenses for a particular event will be listed on the “Details” page.
 *	Guests: Manage your guests by clicking “Guests” in the navigation bar at the top of the page or “Guest List” button on the Cheers! home page. This will take you to the page where all of your guests will be displayed. To create a guest, click on the white “+” icon in the upper left corner of the “Guests” page. To add a guest to a particular event, you’ll need to enter the ID number of the event. To find the event ID number, go to the “Events” page and click on “Details” for the event you want. Once you’ve created a guest entry, you’ll have the options to view the details, edit or delete it.
