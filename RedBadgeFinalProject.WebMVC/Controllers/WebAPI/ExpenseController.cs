@@ -18,7 +18,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers.WebAPI
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ExpenseService(userId);
-            
             var detail = service.GetExpenseById(expenseId);
 
             var updatedExpense =

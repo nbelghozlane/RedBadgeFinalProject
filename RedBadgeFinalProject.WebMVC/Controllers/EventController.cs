@@ -9,26 +9,12 @@ using System.Web.Mvc;
 
 namespace RedBadgeFinalProject.WebMVC.Controllers
 {
-    [Authorize]
     public class EventController : Controller
     {
-        //Dependency Injection
-        //private string _userId;
-        //private readonly IEventService _eventService;
-
-        /*public EventController(IEventService eventService)
-        {
-            _eventService = eventService;
-        }*/
         
-        //[Authorize]
+        [Authorize]
         public ActionResult Index()
         {
-            //_userId = User.Identity.GetUserId();
-            //var userId = User.Identity.GetUserId();
-            //Guid.Parse(userId);
-
-            //EventService eventService = new EventService(_userId); //
             var service = CreateEventService();
             
             var model = service.GetEvents();
@@ -47,8 +33,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            //_userId = User.Identity.GetUserId();
-            //model.UserId = User.Identity.GetUserId();
             var service = CreateEventService();
 
             if (service.CreateEvent(model))
@@ -64,8 +48,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
 
         public ActionResult Details(int id)
         {
-            //_userId = User.Identity.GetUserId();
-            //Guid.Parse(userId);
             var service = CreateEventService();
 
             var model = service.GetEventById(id);
@@ -75,10 +57,7 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
 
         public ActionResult Edit(int id)
         {
-            //_userId = User.Identity.GetUserId();
-            //Guid.Parse(userId);
             var service = CreateEventService();
-
             var detail = service.GetEventById(id);
             var model =
                 new EventEdit
@@ -97,9 +76,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, EventEdit model)
         {
-            //_userId = User.Identity.GetUserId();
-            //Guid.Parse(userId);
-
             if (!ModelState.IsValid)
                 return View(model);
 
@@ -110,8 +86,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
             }
 
             var service = CreateEventService();
-
-            //var service = CreateEventService();
 
             if (service.UpdateEvent(model))
             {
@@ -138,9 +112,6 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteEvent(int id)
         {
-            //_userId = User.Identity.GetUserId();
-            //Guid.Parse(userId);
-
             var service = CreateEventService();
 
             service.DeleteEvent(id);
@@ -150,7 +121,7 @@ namespace RedBadgeFinalProject.WebMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        private EventService CreateEventService() //Remove for DI
+        private EventService CreateEventService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new EventService(userId);

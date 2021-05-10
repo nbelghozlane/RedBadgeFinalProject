@@ -24,7 +24,6 @@ namespace RedBadgeFinalProject.Services
             var entity =
                 new Event()
                 {
-                    //UserId =  _userId,
                     OwnerId = _userId,
                     EventName = model.EventName,
                     EventType = model.EventType,
@@ -46,7 +45,6 @@ namespace RedBadgeFinalProject.Services
                 var query =
                     ctx
                         .Events
-                        //.Where(e => e.UserId == _userId)
                         .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
@@ -88,7 +86,7 @@ namespace RedBadgeFinalProject.Services
                 var entity =
                     ctx
                         .Events
-                        .Single(e => e.EventId == id && e.OwnerId == _userId);  //Guid.Parse(_userId)
+                        .Single(e => e.EventId == id && e.OwnerId == _userId);  
                 return
                     new EventDetail
                     {

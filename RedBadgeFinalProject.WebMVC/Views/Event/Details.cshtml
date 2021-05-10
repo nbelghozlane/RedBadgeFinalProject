@@ -66,6 +66,7 @@
             </dt>
             <dd>
                 <header class="guests-exp-header">Expenses</header><br />
+
                 @foreach (var expense in Model.Expenses)
                 {
                     <p> @Html.DisplayFor(model => expense.Description)</p>
