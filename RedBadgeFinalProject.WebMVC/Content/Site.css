@@ -74,7 +74,7 @@ textarea {
     background-color: #ffe6ea;
     border: 3px dotted lightpink;
     font-family: 'Brush Script MT';
-    font-size: 75px;
+    font-size: 80px;
     border-radius: 1em;
     box-shadow: 0 0 20px black;
 }
@@ -118,15 +118,18 @@ textarea {
 
 .btn {
     background-color: darkblue;
-    border: 3px solid lightblue;
+    border: 5px solid lightblue;
+    font-weight: bold;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 15px black;
 }
 
 .btn:hover {
-    background-color: aliceblue;
-    color: black;
+    background-color: palevioletred;
+    color: white;
     font-weight: bold;
+    border: 3px solid darkslateblue;
 }
 
 .guest-header {
@@ -161,6 +164,8 @@ textarea {
     border-radius: 2em;
     border: 3px solid darkslategray;
     opacity: 0.95;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .about-contact-header {
@@ -209,7 +214,6 @@ h4 {
     text-align: center;
     font-size: 25px;
 }
-
 
 .dl-horizontal {
     background-color: white;
